@@ -1,0 +1,130 @@
+.main-footer {
+  padding: 64px 0;
+  background: $p-dark;
+
+  .footer {
+    &-menu-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 64px;
+    }
+
+    &-menu-group {
+      display: inline-block;
+      vertical-align: top;
+      width: 210px;
+      padding-right: 20px;
+
+      @include r-max(1110) {
+        width: 150px;
+      }
+
+      @include r-max(859) {
+        width: 50%;
+        margin-bottom: 32px;
+      }
+    }
+
+    &-menu-title {
+      margin-bottom: 16px;
+      font-size: 17px;
+      color: $white;
+      font-weight: 700;
+    }
+
+    &-menu-list {
+    }
+
+    &-menu-item {
+      padding: 7px 0;
+    }
+
+    &-menu-link {
+      display: inline-block;
+      font-size: 17px;
+      color: $white;
+      font-weight: 300;
+      line-height: 21px;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &-social-item {
+      display: inline-block;
+      margin-right: 16px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &-social-link {
+      transition: all .3s ease;
+
+      img {
+        width: 36px;
+      }
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+
+    &-logo-copy {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-logo {
+      transition: all .3s ease;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+
+    &-copyrights {
+      color: $white;
+    }
+  }
+
+  @include r-max(860) {
+    .footer-menu-wrapper {
+      margin-bottom: 35px;
+    }
+  }
+
+  @include r-max(680) {
+    position: relative;
+    padding-top: 120px;
+    padding-bottom: 45px;
+
+    .footer-menu-wrapper {
+      flex-wrap: wrap;
+    }
+
+    .footer-social {
+      width: 100%;
+    }
+
+    .footer-logo-copy {
+      .footer-logo {
+        position: absolute;
+        top: 40px;
+        left: 5%;
+      }
+    }
+  }
+
+  @include r-max(390) {
+    .footer-menu-group {
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+}

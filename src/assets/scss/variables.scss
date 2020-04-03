@@ -1,0 +1,18 @@
+// Variables
+@import 'mixins.scss';
+
+// Colors
+  $p-dark: #3B3954;
+  $green: #709C8A;
+  $white: #F5F2ED;
+
+// Values
+  $block-offset: 195px;
+
+  @include r-max(1340) {
+    $block-offset: 90px;
+  }
+
+  @include r-max(1279) {
+    $block-offset: 60px;
+  }

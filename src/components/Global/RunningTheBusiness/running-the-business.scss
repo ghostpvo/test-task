@@ -1,0 +1,90 @@
+.running-the-business {
+  width: 768px;
+  margin-bottom: $block-offset;
+
+  .blc-title {
+    margin-bottom: 64px;
+  }
+
+  .running-business {
+    &-data {
+      margin-bottom: 64px;
+    }
+
+    &-txt {
+      margin-bottom: 28px;
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 28px;
+      color: $p-dark;
+    }
+
+    &-list {
+      .rb-list-item {
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 28px;
+        color: $p-dark;
+
+        &:before {
+          content: '- ';
+        }
+      }
+    }
+
+    &-contact {
+      .main-btn {
+        display: inline-block;
+        vertical-align: middle;
+        padding-right: 66px;
+        padding-left: 66px;
+        margin-right: 32px;
+      }
+
+      .rb-contact-txt {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 6px;
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 28px;
+        color: $p-dark;
+      }
+
+      .rb-contact-link {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 28px;
+        color: $green;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  @include r-max(520) {
+    .running-business {
+      &-contact {
+        .main-btn {
+          padding-right: 40px;
+          padding-left: 40px;
+        }
+      }
+    }
+  }
+
+  @include r-max(440) {
+    .running-business {
+      &-contact {
+        .rb-contact-txt {
+          display: none;
+        }
+      }
+    }
+  }
+}

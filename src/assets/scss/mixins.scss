@@ -1,0 +1,59 @@
+@mixin sq($s){
+  width: $s;
+  height: $s;
+};
+
+@mixin placeholder() {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &::placeholder {
+    @content
+  }
+}
+
+@mixin wrap() {
+  padding: 16px;
+}
+
+/* Media queries for responsive
+---------------------------- */
+@mixin r-min($screen) {
+  @media only screen and (min-width: $screen+'px') {
+    @content;
+  }
+}
+
+@mixin r-max($screen) {
+  @media only screen and (max-width: $screen+'px') {
+    @content;
+  }
+}
+
+@mixin r-min-max($from, $to) {
+  @media only screen and (min-width: $from+'px') and (max-width: $to+'px') {
+    @content;
+  }
+}
+
+@mixin image($source, $format) {
+  background-image: url($source + '.' + $format);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media only screen and ( min-resolution: 124.8dpi ),
+        only screen and ( min-resolution: 1.3dppx ) {
+    background-image: url($source + '@2x.' + $format);
+  }
+}
